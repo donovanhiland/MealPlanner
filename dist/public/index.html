@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="mealplanner">
+  <head>
+    <meta charset="utf-8">
+    <title>Easy Meals</title>
+    <link rel="icon" href="./assets/img/grocery-icon.png" />
+    <link rel="stylesheet" href="./assets/styles.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-controller="mainCtrl">
+    <!-- #ffffff -->
+    <!-- #f6f6f6 -->
+    <div class="header">
+      <div class="header-logo"><img src="./assets/img/easy-meals_logo_01.png" alt="insert logo here" /></div>
+      <div class="header-navigation">
+        <ul>
+          <li>Meal Planner</li>
+          <li>Recipes</li>
+          <li>Logout</li>
+        </ul>
+      </div>
+    </div>
+    <ui-view></ui-view>
+
+  <script   src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js" charset="utf-8"></script>
+  <script src="./bundle.js" charset="utf-8"></script>
+  </body>
+</html>
