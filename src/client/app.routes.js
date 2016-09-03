@@ -5,11 +5,25 @@ angular.module('mealplanner')
     .state('login', {
       url: '/',
       templateUrl: './views/login.html',
-      controller: 'loginCtrl'
+      controller: 'loginCtrl',
+      resolve: {
+        checkUser: (mainService, $state) => {
+          return mainService.checkUser().then(response => {
+            if(response.data) $state.go('home');
+          })
+        }
+      }
     }).state('home', {
       url: '/home',
       templateUrl: './views/home.html',
-      controller: 'homeCtrl'
+      controller: 'homeCtrl',
+      resolve: {
+        checkUser: (mainService, $state) => {
+          return mainService.checkUser().then(response => {
+            if(!response.data) $state.go('login');
+          })
+        }
+      }
     });;
 
     $urlRouterProvider.otherwise('/');
