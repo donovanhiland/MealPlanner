@@ -4,7 +4,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import config from './config.js';
 import session from 'express-session';
-import massive from 'massive'
+import massive from 'massive';
+import FB from 'fb';
 
 // CONTROLLERS //
 

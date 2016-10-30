@@ -1,2 +1,0 @@
-// parse ingredients
-"use strict";

@@ -7,10 +7,10 @@ angular.module('mealplanner')
       templateUrl: './views/login.html',
       controller: 'loginCtrl',
       resolve: {
-        checkUser: (mainService, $state) => {
+        checkAuth: (mainService, $state) => {
           return mainService.checkUser().then(response => {
-            if(response.data) $state.go('home');
-          })
+            if(response) $state.go('home');
+          });
         }
       }
     }).state('home', {
@@ -20,11 +20,14 @@ angular.module('mealplanner')
       resolve: {
         checkUser: (mainService, $state) => {
           return mainService.checkUser().then(response => {
-            if(!response.data) $state.go('login');
-          })
+            if(!response) $state.go('login');
+            else {
+              return response;
+            }
+          });
         }
       }
-    });;
+    });
 
     $urlRouterProvider.otherwise('/');
-  })
+  });
