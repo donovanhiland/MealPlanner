@@ -40,7 +40,7 @@ if (process.env.NODE_ENV === 'production') {
   ];
 } else {
   appEntry = [
-    'webpack-dev-server/client?http://localhost:3000',
+    'webpack-dev-server/client?http://localhost:4000',
     'webpack/hot/only-dev-server',
     path.join(__dirname, 'src/client/app.jsx')
   ];
@@ -69,6 +69,11 @@ module.exports = {
   },
   devtool,
   module: {
+    preLoaders: [{
+      test: /\.jsx$/,
+      loader: 'eslint',
+      exclude: /node_modules/
+    }],
     loaders: [{
       test: /\.jsx?$/,
       loaders: ['babel'],
