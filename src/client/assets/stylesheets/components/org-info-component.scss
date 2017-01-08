@@ -1,0 +1,13 @@
+.org-info-component {
+    .card {
+        .card-row {
+            .card-label {
+                width: 40%;
+            }
+
+            .card-value {
+                width: calc(60% - 15px);
+            }
+        }
+    }
+}

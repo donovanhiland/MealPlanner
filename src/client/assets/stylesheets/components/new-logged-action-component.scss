@@ -1,0 +1,23 @@
+.new-logged-action-component {
+  .new-logged-action-body {
+    padding: 10px;
+
+    textarea {
+      width: 100%;
+    }
+  }
+
+  .new-logged-action-header {
+    padding: 10px;
+  }
+
+  .activity-saving-loader {
+    float: right;
+    margin-right: 16px;
+    width: auto;
+  }
+
+  .card {
+    box-shadow: 0 1px 4px rgba(43,59,93,.2);
+  }
+}

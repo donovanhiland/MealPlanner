@@ -49,7 +49,6 @@ if (config.env === 'development') {
   });
 
   // Serve static resources
-  relayServer.use('/', express.static(path.join(__dirname, '../build')));
   relayServer.listen(config.port, () => console.log(chalk.green(`Relay is listening on port ${config.port}`)));
 } else if (config.env === 'production') {
   // Launch Relay by creating a normal express server

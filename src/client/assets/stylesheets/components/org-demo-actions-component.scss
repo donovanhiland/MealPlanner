@@ -1,0 +1,13 @@
+.org-demo-actions-component {
+    .card {
+        .card-row {
+            .card-label {
+                width: 50%;
+            }
+
+            .card-value {
+                width: calc(50% - 15px);
+            }
+        }
+    }
+}

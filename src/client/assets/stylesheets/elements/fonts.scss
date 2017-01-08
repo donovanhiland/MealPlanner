@@ -1,0 +1,22 @@
+@font-face{
+  font-family:"DIN";
+  src:asset-url("din.eot?#iefix");
+  src:asset-url("din.eot?#iefix") format("eot"),
+    asset-url("din.woff2") format("woff2"),
+    asset-url("din.woff") format("woff"),
+    asset-url("din.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+@font-face{
+  font-family:"DIN";
+  src:asset-url("din-thin.eot?#iefix");
+  src:asset-url("din-thin.eot?#iefix") format("eot"),
+    asset-url("din-thin.woff2") format("woff2"),
+    asset-url("din-thin.woff") format("woff"),
+    asset-url("din-thin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}

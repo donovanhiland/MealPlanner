@@ -1,0 +1,14 @@
+.deal-requirements-component {
+
+  .truncated-show {
+    display: none;
+  }
+
+  .card-value.truncated .truncated-show {
+    display: inline;
+  }
+
+  .content {
+    padding: 0;
+  }
+}

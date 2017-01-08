@@ -1,0 +1,136 @@
+// TODO : Remove this file stuff
+// and replace with brixio-modal and remove bootstrap modal all-together
+
+.session-modal {
+    background-color: #2C2F2E;
+}
+
+.session-logo {
+    background-image: asset-url('logo.png');
+    height: 75px;
+    width: 75px;
+    background-size: 100%;
+    margin: auto;
+}
+
+.session-errors {
+    color: $medium-text-on-dark;
+    text-align: left;
+    font-size: 15px;
+    float: left;
+}
+
+.modal-backdrop,
+.modal-backdrop.in {
+    background-color: $modal-bg;
+    opacity: 1;
+}
+
+.modal .close {
+    color: $dark-text-on-dark;
+    cursor: pointer;
+    right: 20px;
+    top: 20px;
+    position: absolute;
+}
+
+.modal .close .material-icons {
+    font-size: 40px;
+}
+
+.modal-dialog {
+    margin-top: 6%;
+    color: $dark-text-on-dark;
+}
+
+.modal-content {
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    /*	overflow: auto;*/
+}
+
+.modal-header {
+    border: none;
+}
+
+.on-dark .modal-header {
+    background-color: transparent;
+}
+
+.modal-title {
+    font-size: 24px;
+}
+
+.modal-body {
+    border-bottom: none;
+}
+
+.modal-body #file {
+    font-family: $primary-font;
+    font-size: 16px;
+}
+
+#upload-submit-btn {
+    position: relative;
+    min-width: 50px;
+}
+
+.modal-footer {
+    margin-top: 20px;
+    padding-top: 30px;
+    position: relative;
+}
+
+.modal-footer.no-border {
+    border: none !important;
+    margin-top: 0;
+}
+
+#upload-spinner {
+    display: none;
+    margin-top: 9px;
+}
+
+.processing #upload-spinner {
+    display: block;
+}
+
+.modal {
+    .custom-select,
+    .custom-select select {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .custom-select:after {
+        width: 36px;
+        text-indent: 9px;
+        top: -11px;
+        height: 42px;
+    }
+
+    .modal-body {
+        textarea {
+            min-height: 160px;
+        }
+    }
+}
+
+.tabs-container {
+    border-radius: 3px;
+    overflow: hidden;
+    width: 600px;
+}
+
+.modal-header {
+    background-color: $brixio-primary;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.modal-body {
+    padding: 10px;
+}

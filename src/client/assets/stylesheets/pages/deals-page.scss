@@ -1,0 +1,26 @@
+.deal-note-section {
+  line-height: 1.5;
+  margin-bottom: 35px;
+}
+
+.deal-note-section .note-date {
+  margin-bottom: 10px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.deal-list td,
+.deal-list th {
+  max-width: 129px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 5px !important;
+}
+
+.no-deals-message {
+  color: $light-text;
+  margin: 20px 0;
+  text-align: center;
+}

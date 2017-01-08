@@ -1,0 +1,89 @@
+.loading-spinner {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 6px;
+  text-align: center;
+}
+
+.loading-spinner .dots {
+  display: flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+}
+
+.loading-spinner i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $brixio-primary;
+  -moz-animation: pulse 1s infinite ease-in-out;
+  animation: pulse 1s infinite ease-in-out;
+}
+
+.loading-spinner i.one {
+  -webkit-animation-delay: -.32s;
+  -moz-animation-delay: -.32s;
+  animation-delay: -.32s;
+}
+
+.loading-spinner i.two {
+  -webkit-animation-delay: -.16s;
+  -moz-animation-delay: -.16s;
+  animation-delay: -.16s;
+}
+
+.loading-spinner.white i {
+  background: #fff;
+}
+@-webkit-keyframes pulse {
+  0%,
+  100%,
+  80% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-moz-keyframes pulse {
+  0%,
+  100%,
+  80% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0%,
+  100%,
+  80% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.list-loader {
+  text-align: center;
+  margin: 20px 0 50px;
+}

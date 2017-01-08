@@ -1,0 +1,49 @@
+/* Fonts ********************/
+$primary-font: 'DIN', sans-serif;
+$large-text: 16px;
+$normal-text: 13px;
+$small-text: 11px;
+/* End Fonts */
+/* Colors *******************/
+$brixio-white: #FCFCFC;
+$brixio-black: #292C2B;
+$brixio-blue: #81CAEF;
+$brixio-primary: #0FC7A0;
+$brixio-warning: #FF6163;
+$brixio-success: $brixio-primary;
+$brixio-info: $brixio-blue;
+$brixio-primary-10: rgba(15, 199, 60, 0.1);
+$brixio-primary-30: rgba(15, 199, 60, 0.3);
+$brixio-success-10: $brixio-primary-10;
+$brixio-success-30: $brixio-primary-30;
+$brixio-info-10: rgba(129, 202, 239, 0.1);
+$brixio-info-30: rgba(129, 202, 239, 0.3);
+$brixio-warning-10: rgba(255, 97, 99, 0.1);
+$brixio-warning-30: rgba(255, 97, 99, 0.3);
+$extra-light-green: #ECF2F1;
+$orange: #F5A623;
+$dark-text: rgba(0,0,0,.85);
+$medium-text: rgba(0,0,0,.58);
+$light-text: rgba(0,0,0,.32);
+$divider: rgba(0,0,0,.10);
+$table-divider: rgba(0,0,0,.03);
+$modal-bg: rgba(41,44,43, .98);
+$dark-text-on-dark: rgba(255,255,255,1);
+$medium-text-on-dark: rgba(255,255,255,.54);
+$light-text-on-dark: rgba(255,255,255,.38);
+$divider-on-dark: rgba(255,255,255,.10);
+$light-element: #F2F2F2;
+$medium-element: #939393;
+$dark-element: #676767;
+$disabled: #E5E5E5;
+$secondary: $light-text;
+/* End colors */
+/* Transitions *******************/
+$fade-time: 0.35s;
+/* End transitions */
+/* Form Fields *******************/
+$field-box-shadow: 0 0 0 1px #d9d9d9;
+$field-focused-box-shadow: 0 0 1px 1px $brixio-primary;
+$field-error-box-shadow: 0 0 1px 1px $brixio-warning;
+$field-focused-error-box-shadow: 0 0 3px 1px $brixio-warning;
+/* End form fields */

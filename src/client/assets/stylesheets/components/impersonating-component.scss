@@ -1,0 +1,17 @@
+.impersonating-container {
+  background-color: $brixio-warning;
+}
+
+.impersonating-message {
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.impersonating-message .material-icons {
+  font-size: 15px;
+  color: #fff;
+}
+
+.impersonating-message a:hover {
+  color: $dark-text;
+}

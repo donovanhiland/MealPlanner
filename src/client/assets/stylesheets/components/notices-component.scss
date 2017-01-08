@@ -1,0 +1,49 @@
+.flash-notice {
+    padding: 12px;
+    border-radius: 3px;
+    margin-top: 10px;
+    background-color: $brixio-info-10;
+    border: solid 1px $brixio-info-30;
+    line-height: 17px;
+
+    i {
+        font-size: 17px;
+        float: left;
+        margin-right: 5px;
+        color: $brixio-info;
+    }
+
+    .close {
+        position: absolute;
+        right: 0;
+        top: 12px;
+        cursor: pointer;
+    }
+}
+
+.flash-notice.success {
+    background-color: $brixio-success-10;
+    border: solid 1px $brixio-success-30;
+
+    i {
+        color: $brixio-success;
+    }
+}
+
+.flash-notice.warning {
+    background-color: $brixio-warning-10;
+    border: solid 1px $brixio-warning-30;
+
+    i {
+        color: $brixio-warning;
+    }
+}
+
+.flash-notice.info {
+    background-color: $brixio-info-10;
+    border: solid 1px $brixio-info-30;
+
+    i {
+        color: $brixio-info;
+    }
+}

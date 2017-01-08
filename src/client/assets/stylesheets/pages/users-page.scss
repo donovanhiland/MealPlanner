@@ -1,0 +1,31 @@
+.edit_user {
+    .org-name {
+        margin: 5px 0;
+        font-size: 17px;
+        color: $dark-text;
+
+        select {
+            display: inline-block;
+            margin-left: 15px;
+            font-size: 17px;
+        }
+    }
+
+    .radial_container {
+        display: flex;
+        justify-content: space-around;
+
+        div {
+            display: inline-block;
+            text-align: center;
+        }
+    }
+}
+
+.impersonate-icon {
+    font-size: 20px;
+    border: none;
+    padding: 0;
+    margin-left: 10px;
+    background-color: transparent;
+}

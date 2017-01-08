@@ -1,0 +1,33 @@
+.add-task-component {
+  .assign-lable {
+    line-height: 35px;
+    @extend .font-normal;
+    @extend .font-medium;
+  }
+
+  .task-form-inputs-top-row {
+    padding: 10px;
+    margin-bottom: 0 !important;
+  }
+
+  .add-task-date-time-picker-container {
+    padding-left: 10px !important;
+
+    input {
+      height: 34px !important;
+      @extend .font-normal;
+      @extend .font-medium;
+    }
+  }
+
+  .assignee-select {
+    width: 250px;
+    margin-left: 10px;
+  }
+
+  .task-saving-loader {
+    float: right;
+    margin-right: 16px;
+    width: auto;
+  }
+}

@@ -1,0 +1,42 @@
+.rw-state-focus {
+  border-color: $brixio-primary;
+}
+
+.rw-widget.rw-state-focus,
+.rw-widget.rw-state-focus:hover {
+  border-color: #ccc;
+  box-shadow: none;
+}
+
+.rw-widget:hover {
+  box-shadow: none;
+  border: #ccc 1px solid;
+}
+
+.rw-combobox input.rw-input,
+.rw-datetimepicker input.rw-input,
+.rw-multiselect,
+.rw-numberpicker input.rw-input {
+  box-shadow: none;
+}
+
+.rw-now {
+  border: none;
+  background-color: $light-element;
+}
+
+.rw-state-selected {
+  border: none;
+  color: #fff;
+  background-color: $brixio-primary;
+}
+
+.rw-calendar-grid td .rw-btn:hover {
+  border: none;
+  color: #fff;
+  background-color: $medium-element;
+}
+
+.rw-i-calendar {
+  color: #999;
+}

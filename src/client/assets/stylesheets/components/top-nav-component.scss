@@ -1,0 +1,122 @@
+#top-nav-component {
+	width: 100%;
+	height: 50px;
+	background-color: #fff;
+
+	.nav-inner {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+		height: 100%;
+	}
+
+	#main-logo {
+		background-image: asset-url('logo-green.png');
+		width: 20px;
+		height: 23px;
+		margin-top: 18px;
+	}
+
+	.top-nav-item,
+	a.top-nav-item {
+		letter-spacing: 0.5px;
+		color: $medium-text;
+		float: left;
+		font-size: 15px;
+		margin-right: 25px;
+		margin-top: 19px;
+		display: block;
+		cursor: pointer;
+		position: relative;
+	}
+
+	.top-nav-item.active,
+	.top-nav-item:hover {
+		color: $dark-text;
+	}
+
+	#top-nav-user {
+		letter-spacing: 1px;
+		font-size: 13px;
+		margin-right: 0;
+		margin-top: 13px;
+	}
+
+	#top-nav-user .arrow-down {
+		margin-left: 5px;
+		margin-top: 9px;
+		border-left-width: 5px;
+		border-right-width: 5px;
+		border-top-width: 6px;
+	}
+
+	#top-nav-user .avatar {
+		border-radius: 3px;
+		width: 23px;
+		height: 23px;
+		float: left;
+		background-size: 100%;
+	}
+
+	#top-nav-user .avatar .initials {
+		font-size: 12px;
+		width: 23px;
+		height: 23px;
+	}
+
+	#user-dropdown-component {
+		position: absolute;
+		right: 0;
+		top: 42px;
+		color: rgba(0, 0, 0, 0.85);
+		min-width: 190px;
+		display: none;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		z-index: 10000000000;
+		@extend .card;
+		box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+
+		.user-dropdown-item,
+		.user-dropdown-top {
+			font-size: $normal-text;
+			color: $medium-text;
+		}
+
+		.user-dropdown-top {
+			padding: 4px 10px;
+		}
+
+		.user-dropdown-top {
+			.user-email {
+				margin-top: 3px;
+			}
+		}
+
+		.user-dropdown-item > a,
+		.user-dropdown-item > span {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			padding: 4px 10px;
+		}
+
+		.user-dropdown-item > a:hover {
+			background-color: rgba(0,0,0,0.1);
+		}
+
+		.user-dropdown-item a:hover {
+			color: $dark-text;
+		}
+
+		.user-dropdown-divider {
+			border-bottom: solid 1px $divider;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+	}
+
+	.nav-badge {
+		position: absolute;
+		top: -2px;
+		right: -5px;
+	}
+}

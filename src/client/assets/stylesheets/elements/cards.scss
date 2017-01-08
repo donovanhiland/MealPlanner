@@ -1,0 +1,80 @@
+.card {
+  background: #FFFFFF;
+  box-shadow: 0 1px 4px rgba(43,59,93,.2);
+  border-radius: 2px;
+  margin-bottom: 15px;
+
+  .card-header {
+    padding: 5px 10px;
+    background-color: $light-element;
+    color: $medium-text;
+    font-size: $small-text;
+
+    .card-header-button {
+      float: right;
+
+      .material-icons {
+        font-size: 12px;
+        cursor: pointer;
+
+        &:hover {
+          color: $brixio-primary;
+        }
+      }
+    }
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+
+  .card-row {
+    padding: 6px 13px;
+    border-bottom: 1px solid #F5F5F5;
+
+    .card-label {
+      margin-right: 15px;
+      display: block;
+      float: left;
+      width: 20%;
+      text-align: right;
+      line-height: 19px;
+      color: $medium-text;
+      @extend .multi-line-font-normal;
+    }
+
+    .card-value {
+      display: block;
+      float: left;
+      width: calc(80% - 15px);
+      @extend .multi-line-font-normal;
+    }
+  }
+
+  .card-row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+// TODO : remove this after notes are replaced
+
+.content-frameless {
+  .header {
+    padding: 5px 10px;
+    color: rgba(0,0,0,0.54);
+    border-bottom: solid 1px rgba(0,0,0,0.1);
+  }
+
+  .content {
+    .label {
+      font-size: 12px;
+      color: rgba(0,0,0,0.54);
+    }
+
+    .value {
+      font-size: 21px;
+      color: rgba(0,0,0,0.87);
+    }
+  }
+}

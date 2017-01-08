@@ -1,0 +1,40 @@
+.has-value.Select--single > .Select-control .Select-value .Select-value-label,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+  font-size: $normal-text;
+  color: $medium-text;
+}
+
+.Select {
+  &.is-focused:not(.is-open) > .Select-control {
+    border-color: #d9d9d9 #ccc #b3b3b3;
+    box-shadow: none;
+  }
+
+  .Select-control {
+    transition: box-shadow $fade-time;
+  }
+
+  .Select-input {
+    padding-left: 5px;
+  }
+
+  .Select-input > input {
+    height: 15px;
+  }
+
+  .Select-option {
+    font-size: $normal-text;
+
+    &.is-focused {
+      background-color: #FAFAFA;
+    }
+
+    &.is-selected {
+      background-color: $light-element;
+    }
+  }
+
+  .Select-clear-zone:hover {
+    color: $brixio-warning;
+  }
+}
