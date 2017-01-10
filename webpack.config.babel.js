@@ -13,7 +13,7 @@ const htmlTemplate = new HtmlWebpackPlugin({
   title: 'Brixio Relay Proto',
   template: './src/client/index.template.html',
   mobile: true,
-  inject: false
+  inject: false,
 });
 // const favIcon = new FaviconsWebpackPlugin('./src/client/assets/logo.png');
 
@@ -26,14 +26,14 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
+        NODE_ENV: JSON.stringify('production'),
+      },
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
-        screw_ie8: true
-      }
+        screw_ie8: true,
+      },
     }),
     htmlTemplate,
     // favIcon
@@ -42,7 +42,7 @@ if (process.env.NODE_ENV === 'production') {
   appEntry = [
     'webpack-dev-server/client?http://localhost:4000',
     'webpack/hot/only-dev-server',
-    path.join(__dirname, 'src/client/app.jsx')
+    path.join(__dirname, 'src/client/app.jsx'),
   ];
   devtool = 'eval';
   plugins = [
@@ -50,7 +50,7 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
-      __DEV__: true
+      __DEV__: true,
     }),
     htmlTemplate,
     // favIcon
@@ -65,34 +65,34 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'build', 'public'),
     publicPath: '/',
-    filename: '[name].js'
+    filename: '[name].js',
   },
   devtool,
   module: {
     preLoaders: [{
       test: /\.jsx$/,
       loader: 'eslint',
-      exclude: /node_modules/
+      exclude: /node_modules/,
     }],
     loaders: [{
       test: /\.jsx?$/,
       loaders: ['babel'],
-      exclude: /node_modules/
+      exclude: /node_modules/,
     }, {
       test: /\.css$/,
-      loaders: ['style', 'css']
+      loaders: ['style', 'css'],
     }, {
       test: /\.scss$/,
       loaders: [
         'style',
         'css?modules&importLoaders=1' +
-          '&localIdentName=[name]__[local]___[hash:base64:5]!postcss'
-      ]
+          '&localIdentName=[name]__[local]___[hash:base64:5]!postcss',
+      ],
     }, {
       test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
-      loader: 'url-loader?limit=10000&name=assets/[hash].[ext]'
-    }]
+      loader: 'url-loader?limit=10000&name=assets/[hash].[ext]',
+    }],
   },
   postcss: () => [precss, autoprefixer],
-  plugins
+  plugins,
 };
