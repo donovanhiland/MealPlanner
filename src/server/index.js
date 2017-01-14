@@ -16,7 +16,9 @@ import webpackConfig from '../../webpack.config.babel';
 /* === POLICIES === */
 
 if (config.env === 'development') {
-  const devServer = new WebpackDevServer(webpack(webpackConfig), {
+  webpackConfig.entry.app.unshift('webpack-dev-server/client?http://localhost:8080/', 'webpack/hot/dev-server');
+  const compiler = webpack(webpackConfig);
+  const devServer = new WebpackDevServer(compiler, {
     contentBase: '/',
     noInfo: false,
     stats: {
@@ -32,6 +34,7 @@ if (config.env === 'development') {
     hot: true,
     historyApiFallback: true,
   });
+  devServer.listen(8080);
 
   const app = express();
   app.use(cors());
