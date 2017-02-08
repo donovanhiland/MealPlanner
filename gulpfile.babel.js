@@ -12,19 +12,7 @@ const frontendConfig = configs;
 const paths = {
   frontend: './build/',
   server: './src/server/**/*.js',
-  schema: './src/server/data/schema.js',
 };
-
-// Regenerate the graphql schema and recompile the frontend code that relies on schema.json
-gulp.task('generate-schema', () => (
-  gulp.src(paths.schema)
-  .pipe(schema({
-    json: true,
-    graphql: true
-  }))
-  .on('error', console.log)
-  .pipe(gulp.dest('./build/server/data'))
-));
 
 gulp.task('frontend', (callback) => {
   // run webpack
@@ -45,11 +33,6 @@ gulp.task('backend', () => (
     }))
     .pipe(gulp.dest('./build/server'))
 ));
-
-// recompile the schema whenever .js files in data are updated
-gulp.task('watch-schema', () => {
-  gulp.watch(path.join(__dirname, './src/server/data', '**/*.js'), ['generate-schema']);
-});
 
 gulp.task('watch-backend', () => (
   gulp.watch(['./src/server/**/*.js'], ['backend'])
