@@ -29,7 +29,7 @@ gulp.task('backend', () => (
   gulp.src(paths.server)
     .pipe(plumber())
     .pipe(babel({
-      presets: ['es2015']
+      presets: ['es2015'],
     }))
     .pipe(gulp.dest('./build/server'))
 ));
@@ -40,10 +40,10 @@ gulp.task('watch-backend', () => (
 
 gulp.task('watch', ['watch-schema', 'watch-backend']);
 
-const env = process.env.NODE_ENV || 'development';
-
-if (env === 'development') {
-  gulp.task('default', ['generate-schema', 'backend', 'watch']);
-} else if (env === 'production') {
-  gulp.task('default', ['generate-schema', 'frontend', 'backend']);
-}
+// const env = process.env.NODE_ENV || 'development';
+//
+// if (env === 'development') {
+//   gulp.task('default', ['generate-schema', 'backend', 'watch']);
+// } else if (env === 'production') {
+//   gulp.task('default', ['generate-schema', 'frontend', 'backend']);
+// }

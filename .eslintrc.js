@@ -45,6 +45,7 @@ module.exports = {
     'react/react-in-jsx-scope': ERROR,
     'react/self-closing-comp': ERROR,
     'react/jsx-wrap-multilines': [ERROR, {declaration: false, assignment: false}],
+    "react/forbid-prop-types": OFF,
   },
 
   globals: {

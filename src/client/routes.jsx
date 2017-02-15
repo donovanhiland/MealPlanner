@@ -1,13 +1,14 @@
 import React from 'react';
 import { IndexRoute, Route, Redirect } from 'react-router';
 
-const Page = '<div>Test</div>';
+import App from './views/app';
+import Home from './views/home';
+import About from './views/about';
 
 export default (
-  <Route path="/" component={Page}>
-    <IndexRoute component={Page} />
-    <Route path="/signup" component={Page} />
-    <Route path="/login" component={Page} />
+  <Route path="/" component={App}>
+    <IndexRoute component={Home} />
+    <Route path="about" component={About} />
     <Redirect from="*" to="/" />
   </Route>
 );

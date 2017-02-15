@@ -10,7 +10,7 @@ let devtool;
 let plugins;
 
 const htmlTemplate = new HtmlWebpackPlugin({
-  title: 'Brixio Relay Proto',
+  title: 'Meal Planner App',
   template: './src/client/index.template.html',
   mobile: true,
   inject: false,
@@ -18,7 +18,7 @@ const htmlTemplate = new HtmlWebpackPlugin({
 // const favIcon = new FaviconsWebpackPlugin('./src/client/assets/logo.png');
 
 if (process.env.NODE_ENV === 'production') {
-  appEntry = [path.join(__dirname, 'src/client/app.jsx')];
+  appEntry = [path.join(__dirname, 'src/client/index.jsx')];
   devtool = 'source-map';
   plugins = [
     new webpack.optimize.DedupePlugin(),
@@ -40,9 +40,9 @@ if (process.env.NODE_ENV === 'production') {
   ];
 } else {
   appEntry = [
-    'webpack-dev-server/client?http://localhost:4000',
+    'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    path.join(__dirname, 'src/client/app.jsx'),
+    path.join(__dirname, 'src/client/index.jsx'),
   ];
   devtool = 'eval';
   plugins = [
@@ -60,7 +60,7 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
   entry: {
     app: appEntry,
-    // vendor: ['react', 'react-dom', 'react-relay', 'react-router', 'react-router-relay']
+    // vendor: ['react', 'react-dom', 'react-relay', 'react-router']
   },
   output: {
     path: path.join(__dirname, 'build', 'public'),
@@ -71,7 +71,7 @@ module.exports = {
   module: {
     preLoaders: [{
       test: /\.jsx$/,
-      loader: 'eslint',
+      loader: 'eslint-loader',
       exclude: /node_modules/,
     }],
     loaders: [{
@@ -92,6 +92,9 @@ module.exports = {
       test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
       loader: 'url-loader?limit=10000&name=assets/[hash].[ext]',
     }],
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
   },
   postcss: () => [precss, autoprefixer],
   plugins,

@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { browserHistory, Router } from 'react-router';
 
-import Route from './routes';
+import Routes from './routes';
 
 ReactDOM.render(
-  <Router
-    history={browserHistory}
-    routes={Route}
-  />,
+  <Router history={browserHistory}>
+    {Routes}
+  </Router>,
   document.getElementById('root')
 );
