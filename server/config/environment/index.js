@@ -1,9 +1,9 @@
 /* eslint-disable global-require */
-import _ from 'lodash';
+const _ = require('lodash');
 
 const config = {
   env: process.env.NODE_ENV || 'development',
   port: process.env.PORT || 3000,
 };
 
-export default _.extend(config, require(`./${config.env}`).default);
+module.exports = _.extend(config, require(`./${config.env}`));

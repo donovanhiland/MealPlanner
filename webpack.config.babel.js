@@ -10,8 +10,8 @@ let devtool;
 let plugins;
 
 const htmlTemplate = new HtmlWebpackPlugin({
-  title: 'Meal Planner App',
-  template: './src/client/index.template.html',
+  title: 'React App',
+  template: './app/index.template.html',
   mobile: true,
   inject: false,
 });
@@ -42,7 +42,7 @@ if (process.env.NODE_ENV === 'production') {
   appEntry = [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    path.join(__dirname, 'src/client/index.jsx'),
+    path.join(process.cwd(), 'app/index.jsx'),
   ];
   devtool = 'eval';
   plugins = [

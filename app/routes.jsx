@@ -8,7 +8,7 @@ import About from './views/about';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Home} />
-    <Route path="about" component={About} />
+    <Route path="/about" component={About} />
     <Redirect from="*" to="/" />
   </Route>
 );

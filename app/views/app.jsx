@@ -2,6 +2,7 @@ import React from 'react';
 
 const App = props => (
   <div className="app-layout">
+    Testasdf
     {props.children}
   </div>
 );
