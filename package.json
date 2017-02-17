@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development node server",
     "deploy": "npm run clean && npm run build && npm run start:prod",
-    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js -p",
     "start:production": "npm run build && npm run start:prod",
     "start:prod": "cross-env NODE_ENV=production node server",
     "clean": "rm -rf build && mkdir build"
