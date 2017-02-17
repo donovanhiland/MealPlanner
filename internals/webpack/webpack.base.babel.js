@@ -10,11 +10,7 @@ module.exports = options => ({
     publicPath: '/',
   }, options.output),
   module: {
-    preLoaders: [{
-      test: /\.jsx$/,
-      loader: 'eslint-loader',
-      exclude: /node_modules/,
-    }],
+    preLoaders: options.module.preLoaders || null,
     loaders: [{
       test: /\.jsx?$/,
       loaders: process.env.NODE_ENV === 'production' ? ['babel'] : ['react-hot', 'babel'],
