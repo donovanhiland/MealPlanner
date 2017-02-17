@@ -1,0 +1,20 @@
+{
+  "name": "MealPlanner",
+  "description": "A lightweight app to save, share, and plan your meals",
+  "scripts": {
+    "postdeploy": "npm deploy"
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku"
+    }
+  ]
+}
