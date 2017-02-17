@@ -32,13 +32,11 @@ module.exports = require('./webpack.base.babel')({
     chunkFilename: '[name].chunk.js',
   },
 
-  module: {
-    preLoaders: [{
-      test: /\.jsx$/,
-      loader: 'eslint-loader',
-      exclude: /node_modules/,
-    }],
-  },
+  preLoaders: [{
+    test: /\.jsx$/,
+    loader: 'eslint-loader',
+    exclude: /node_modules/,
+  }],
 
   // Add development plugins
   plugins, // eslint-disable-line no-use-before-define
