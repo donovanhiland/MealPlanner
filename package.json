@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development node server",
-    "deploy": "npm run clean && cross-env NODE_ENV=production webpack --config ./internals/webpack/webpack.prod.babel.js && cross-env NODE_ENV=production node ./build/index.js",
+    "deploy": "npm run clean && cross-env NODE_ENV=production webpack --config ./internals/webpack/webpack.prod.babel.js && cross-env NODE_ENV=production node ./server/index.js",
     "build-server": "cross-env NODE_ENV=production ./node_modules/.bin/babel ./src/server --out-dir ./build",
     "babel-node": "babel-node --ignore='foo|bar|baz'",
     "clean": "rm -rf build && mkdir build"

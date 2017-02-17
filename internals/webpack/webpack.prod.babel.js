@@ -22,7 +22,6 @@ module.exports = require('./webpack.base.babel')({
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
-        screw_ie8: true,
       },
     }), // check
     new webpack.optimize.CommonsChunkPlugin({
@@ -72,6 +71,8 @@ module.exports = require('./webpack.base.babel')({
       AppCache: false,
     }), // check
   ],
+
+  devtool: 'source-map',
 
   performance: {
     assetFilter: assetFilename => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename)),

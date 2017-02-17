@@ -19,10 +19,14 @@ const sequelize = new Sequelize(config.PG_CONNECTION_URI, { logging: false });
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sessionStore = new SequelizeStore({ db: sequelize });
-// set logger level
+
+// set logger levels
 winston.level = config.LOG_LEVEL;
 
 const app = express();
+
+// use express 4 routes
+app.use('/', router);
 
 setup(app, {
   outputPath: resolve(process.cwd(), 'build'),
@@ -37,15 +41,6 @@ app.use(session({
   saveUninitialized: true,
   resave: true,
 }));
-// logs on every request
-app.use((req, res, next) => {
-  winston.info(chalk.cyan(`Request to: ${req.url}`));
-  winston.info(chalk.cyan('Params: ', util.inspect(req.params, false, null)));
-  winston.info(chalk.cyan('Query: ', util.inspect(req.query, false, null)));
-  next();
-});
-// express 4 routes
-app.use('/', router);
 
 const customHost = argv.host || process.env.HOST;
 const prettyHost = customHost || 'localhost';
