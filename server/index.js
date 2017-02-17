@@ -48,6 +48,7 @@ const prettyHost = customHost || 'localhost';
 sessionStore.sync().then(() => {
   app.listen(config.port, () => {
     winston.info(`${chalk.cyan('* Server started !')} ${chalk.green('✓')}`);
+    winston.info(`ENVIRONMENT: ${process.env}`);
     winston.info(chalk.cyan(`* Environment: ${config.env}`));
     winston.info(chalk.cyan(`* Express listening on http://${prettyHost}:${config.port}`));
     if (process.env.NODE_ENV === 'development') {
