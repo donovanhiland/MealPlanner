@@ -17,7 +17,7 @@ module.exports = options => ({
     }],
     loaders: [{
       test: /\.jsx?$/,
-      loaders: process.env === 'production' ? ['babel'] : ['react-hot', 'babel'],
+      loaders: process.env.NODE_ENV === 'production' ? ['babel'] : ['react-hot', 'babel'],
       exclude: /node_modules/,
     }, {
       test: /\.css$/,
