@@ -2,7 +2,7 @@
   "name": "MealPlanner",
   "description": "A lightweight app to save, share, and plan your meals",
   "scripts": {
-    "postdeploy": "npm run deploy"
+    "postinstall": "npm run deploy"
   },
   "env": {
     "NODE_ENV": "production"
